@@ -4,15 +4,33 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Todo Application</title>
-    <link rel="stylesheet" type="text/css" href="todo.css" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
   </head>
+
   <body>
-    <h1>Todo App</h1>
-    <div class="todo-container">
-      <input type="text" id="task-input" placeholder="Enter a task..." />
-      <button id="add-task-btn">Add Task</button>
-      <ul id="task-list"></ul>
+    <div class="container">
+      <div class="sidebar">
+        <h2>Lists</h2>
+        <ul id="lists"></ul>
+        <button id="create-list-btn">Create New List</button>
+      </div>
+      <div class="content">
+        <h2 id="list-name"></h2>
+        <div class="task-form">
+          <input type="text" id="task-input" placeholder="Enter task" />
+          <button id="add-task-btn">Add Task</button>
+        </div>
+        <div class="task-filter">
+          <label for="filter-select">Filter:</label>
+          <select id="filter-select">
+            <option value="all">All</option>
+            <option value="active">Active</option>
+            <option value="completed">Completed</option>
+          </select>
+        </div>
+        <ul id="task-list"></ul>
+      </div>
     </div>
-    <script src="todo.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
